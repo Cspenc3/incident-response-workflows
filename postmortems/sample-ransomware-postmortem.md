@@ -1,50 +1,56 @@
-# Postmortem Report: Ransomware Incident
+# Fictional Ransomware Incident — Example Postmortem
 
-**Date of Incident:** 2025-08-31  
-**Prepared By:** Chris Spencer  
+> **ILLUSTRATIVE SCENARIO ONLY:** This is a fictional example written to practice post-incident reporting. The date, timeline, findings, affected assets, data volume, and financial impact below are **invented**. This document is **not** a real-world investigation, exercise execution log, or validated forensic report.
 
----
+**Example date:** August 31, 2025 (fictional)  
+**Document purpose:** Incident response reporting practice
 
-## 1. Incident Summary
-On <date>, suspicious activity was detected involving unauthorized file encryption on a Windows server. Investigation revealed ransomware deployment via phishing email attachment.
+## 1. Scenario Summary
 
----
+An illustrative organization reports inaccessible files on a Windows file server. In this invented scenario, an investigation attributes encryption to malware delivered through a phishing attachment.
 
-## 2. Timeline
-- 08:15 – Alert triggered in SIEM (multiple failed logins).
-- 08:20 – User reported inability to access files.
-- 08:30 – IR team confirmed ransomware note on shared drive.
-- 08:45 – Containment: server isolated from network.
-- 10:00 – Eradication: ransomware binary removed, backups validated.
-- 12:00 – Recovery: data restored from backup.
+## 2. Example Timeline (Fictional)
 
----
+| Time | Scenario event |
+| --- | --- |
+| 08:15 | Monitoring system alerts on multiple unsuccessful logins |
+| 08:20 | User reports inability to access files |
+| 08:30 | Response team observes a ransom note |
+| 08:45 | Affected system is isolated |
+| 10:00 | Hypothetical malware removal and backup validation |
+| 12:00 | Hypothetical restoration of affected data |
 
-## 3. Root Cause Analysis
-- **Initial Access:** Spearphishing attachment (MITRE T1566.001).  
-- **Execution:** Malicious macro executed in Word document.  
-- **Privilege Escalation:** User had local admin rights.  
-- **Impact:** 250 GB of data encrypted. No exfiltration detected.  
+## 3. Hypothetical Findings
 
----
+- **Initial access:** Spearphishing attachment (MITRE ATT&CK T1566.001)
+- **Execution:** Malicious macro in a document
+- **Privilege / exposure issue:** Inappropriate local administrative access
+- **Illustrative impact:** 250 GB of encrypted data
+- **Exfiltration:** No evidence assumed in the sample; a real investigation would require validation
 
-## 4. Business Impact
-- 3 hours downtime for affected business unit.
-- Estimated productivity loss: $25,000.
+These are sample narrative elements, not findings from collected evidence.
 
----
+## 4. Hypothetical Business Impact
 
-## 5. Lessons Learned
-- Lack of MFA on user accounts increased risk.
-- Endpoint security solution did not detect the malicious macro.
-- Network share permissions were overly permissive.
+- Example downtime: three hours
+- Example productivity loss: $25,000
 
----
+These figures are invented to demonstrate how a report might present impact.
 
-## 6. Recommended Architecture Improvements
-- Enforce MFA on all accounts.  
-- Implement email sandboxing for attachments.  
-- Review and limit shared drive permissions.  
-- Improve SIEM rules to detect abnormal file encryption activity.  
+## 5. Potential Lessons Learned
 
----
+- Require phishing-resistant authentication where feasible.
+- Review endpoint protection, attachment handling, and execution controls.
+- Apply least privilege to user and network share access.
+- Validate offline or otherwise protected backups and recovery procedures.
+
+## 6. Example Architecture Recommendations
+
+- Strengthen identity controls, privilege management, and endpoint monitoring.
+- Restrict network access to file services by business requirement.
+- Create detection rules for suspicious encryption-related behavior.
+- Test backup restoration and document achievable recovery objectives.
+
+## Portfolio Note
+
+This sample demonstrates **communication structure and reasoning**, not incident response execution. A future lab postmortem should include actual sanitized evidence, testing methods, limitations, and measured outcomes.
