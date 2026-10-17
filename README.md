@@ -1,51 +1,36 @@
 # Incident Response Workflows
 
-A curated collection of **incident response playbooks, templates, and postmortems** aligned with [NIST SP 800-61r2](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf).  
-This repository demonstrates my ability to **detect, analyze, contain, eradicate, and recover from security incidents**, while documenting lessons learned for long-term architectural improvements.
+**Status: Written playbooks and templates, plus an illustrative postmortem.** This repository documents response process design. It does **not** represent multiple completed investigations or a deployed SIEM/SOAR platform.
 
----
+The documentation is informed by [NIST SP 800-61 Rev. 3](https://csrc.nist.gov/pubs/sp/800/61/r3/final) and is meant to support structured incident preparation, analysis, response, recovery, and continuous improvement. It is not a claim of formal NIST compliance.
 
-## 📌 Contents
-- **Playbooks** – Step-by-step guides for responding to phishing, malware, ransomware, and cloud-related incidents.  
-- **Templates** – Standardized forms for incident reports, executive summaries, and communication plans.  
-- **Postmortems** – Example after-action reports documenting root causes, business impact, and architecture recommendations.
+## Available Materials
 
----
+| Document | What it contains |
+| --- | --- |
+| [Phishing incident playbook](./playbooks/phishing-playbook.md) | Written detection, triage, containment, recovery, and follow-up steps |
+| [Incident report template](./templates/incident-report-template.md) | Reusable structure for reporting observations and decisions |
+| [Executive summary template](./templates/executive-summary-template.md) | Concise stakeholder communication |
+| [Communications plan template](./templates/comms-plan-template.md) | Incident notification and coordination prompts |
+| [Ransomware postmortem — fictional example](./postmortems/sample-ransomware-postmortem.md) | Illustrative report format with **invented** scenario and figures |
 
-## 🎯 Goals
-- Practice and demonstrate **incident handling skills** across multiple attack scenarios.  
-- Develop **reusable templates** for consistent IR documentation.  
-- Build a **portfolio** aligned with roles such as *Intrusion Analyst II* and *Incident Response Analyst*.  
-- Showcase the ability to link incidents to **MITRE ATT&CK techniques** and propose **preventive architecture improvements**.  
+## How to Evaluate This Work
 
----
+These files show **process design and documentation**, not evidence that the listed response steps were performed in a real incident. Future case studies should link sanitized logs, test environments, validated findings, and measurable outcomes.
 
-## 🔗 Related Projects
-- [Windows Log Detections](https://github.com/Cspenc3/windows-log-detections) – Sysmon configs, Sigma rules, and SIEM queries.  
-- [Memory Forensics Quickstart](https://github.com/Cspenc3/memory-forensics-quickstart) – Volatility 3 triage and IOC extraction.  
-- [Network Triage (PCAP/Zeek)](https://github.com/Cspenc3/network-triage-pcap) – Wireshark/Zeek traffic analysis and Suricata rules.  
-- [Cloud Incident Response](https://github.com/Cspenc3/cloud-incident-response) – GuardDuty triage and CloudTrail hunting workflows.  
-- [Phishing Triage Lab](https://github.com/Cspenc3/phishing-triage-lab) – Email header parsing, URL analysis, and enrichment scripts.  
+## Relevant Completed Lab
 
----
+- [SOC Incident Response Lab](https://github.com/Cspenc3/security-portfolio/tree/main/soc-incident-response-lab) — packet-analysis screenshots, DNS anomaly investigation, and Linux host-review evidence.
+- [Network fundamentals and study notes](https://github.com/Cspenc3/network-triage-pcap) — reference notes and planned traffic-analysis exercises.
+- [Cybersecurity portfolio](https://github.com/Cspenc3/security-portfolio) — consolidated project index.
 
-## 🧭 How to Use This Repo
-1. Explore the `playbooks/` folder for incident handling guides.  
-2. Use the `templates/` folder to standardize your reporting and communication.  
-3. Review `postmortems/` for examples of lessons learned and recommendations.  
-4. Apply these workflows to labs, simulations, or real-world incidents.  
+## Next Steps
 
----
+- Expand the phishing playbook with decision points and evidence collection requirements.
+- Validate a response workflow in an isolated lab and publish results.
+- Explore Splunk investigations with real lab-generated events.
+- Connect incident response decisions to system design, segmentation, and industrial availability constraints.
 
-## 📈 Roadmap
-- Add new playbooks (Insider Threat, Cloud IAM Abuse, Lateral Movement).  
-- Expand postmortems with additional scenarios from practice labs.  
-- Automate parts of the workflow with Python scripts (IOC extraction, timeline generation).  
+## About
 
----
-
-## 🧑‍💻 Author
-**Chris Spencer**  
-- 🎓 B.S. Cybersecurity (Project Management Concentration – SNHU)  
-- 🔒 CompTIA CySA+ Certified  
-- 🌐 Aspiring **Incident Response Specialist → Cybersecurity Architect**  
+Christopher Spencer | CompTIA CySA+ | B.S. Cybersecurity (SNHU, in progress) | Developing OT/ICS security engineering skills.
